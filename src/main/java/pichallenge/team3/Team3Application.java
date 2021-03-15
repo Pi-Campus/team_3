@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,8 +22,12 @@ public class Team3Application {
     public static class App {
 
         @GetMapping({"", "/"})
-        public String homePage(Model model) {
-            model.addAttribute("examples", Arrays.asList("Cases by county", "Cases in New York"));
+        public String homePage(@RequestParam(required = false) String q, Model model) {
+            model.addAttribute("q", q);
+            model.addAttribute("examples", Arrays.asList(
+                    "Cases by county",
+                    "Cases in New York"
+            ));
             return "home";
         }
     }

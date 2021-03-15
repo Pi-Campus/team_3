@@ -82,7 +82,7 @@
                         <!--begin::Page Heading-->
                         <div class="d-flex align-items-baseline flex-wrap mr-5">
                             <!--begin::Page Title-->
-                            <h4 class="text-dark font-weight-bold my-1 mr-5">AA</h4>
+                            <h4 class="text-dark font-weight-bold my-1 mr-5">Askdata: COVID</h4>
                             <!--end::Page Title-->
                         </div>
                         <!--end::Page Heading-->
@@ -101,29 +101,44 @@
                         <!--begin::Dashboard-->
 
                         <div class="row">
-                            <div class="col">
-                                <div class="card card-custom card-stretch gutter-b">
-                                    <div class="card-header border-0 pt-6">
-                                        <h3 class="card-title">
-                                            <span class="card-label font-weight-bolder font-size-h4 text-dark-75">
-                                                Pizze
-                                            </span>
-                                        </h3>
-                                    </div>
-                                    <div class="card-body d-flex align-items-center justify-content-between pt-7 flex-wrap">
-                                        <span class="font-weight-bolder display5 text-dark-75 pl-5 pr-10">
-                                            22
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
 
                             <div class="col">
                                 <div class="card card-custom card-stretch gutter-b">
                                     <div class="card-header border-0 pt-6">
                                         <h3 class="card-title">
                                             <span class="card-label font-weight-bolder font-size-h4 text-dark-75">
-                                                Ingredienti totali
+                                                Query: [[${q}]]
+                                            </span>
+                                        </h3>
+                                    </div>
+                                    <div class="card-body d-flex align-items-center justify-content-between pt-7 flex-wrap">
+                                        <form class="form w-100" th:action="@{/}" method="get">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <input type="text"
+                                                           th:value="${q}"
+                                                           name="q"
+                                                           class="form-control"
+                                                           placeholder="Search for...">
+                                                    <div class="input-group-append">
+                                                        <button class="btn btn-primary" type="button">Go!</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="card card-custom card-stretch gutter-b">
+                                    <div class="card-header border-0 pt-6">
+                                        <h3 class="card-title">
+                                            <span class="card-label font-weight-bolder font-size-h4 text-dark-75">
+                                                Slot 1
                                             </span>
                                         </h3>
                                     </div>
@@ -140,34 +155,13 @@
                                     <div class="card-header border-0 pt-6">
                                         <h3 class="card-title">
                                             <span class="card-label font-weight-bolder font-size-h4 text-dark-75">
-                                                Ingredienti unici
+                                                Slot 2
                                             </span>
                                         </h3>
                                     </div>
                                     <div class="card-body d-flex align-items-center justify-content-between pt-7 flex-wrap">
                                         <span class="font-weight-bolder display5 text-dark-75 pl-5 pr-10">
-                                            XX
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="row">
-
-                            <div class="col">
-                                <div class="card card-custom card-stretch gutter-b">
-                                    <div class="card-header border-0 pt-6">
-                                        <h3 class="card-title">
-                                            <span class="card-label font-weight-bolder font-size-h4 text-dark-75">
-                                                Giocatori totali
-                                            </span>
-                                        </h3>
-                                    </div>
-                                    <div class="card-body d-flex align-items-center justify-content-between pt-7 flex-wrap">
-                                        <span class="font-weight-bolder display5 text-dark-75 pl-5 pr-10">
-                                            YY
+                                            22
                                         </span>
                                     </div>
                                 </div>
@@ -178,34 +172,18 @@
                                     <div class="card-header border-0 pt-6">
                                         <h3 class="card-title">
                                             <span class="card-label font-weight-bolder font-size-h4 text-dark-75">
-                                                Team
+                                                Slot 3
                                             </span>
                                         </h3>
                                     </div>
                                     <div class="card-body d-flex align-items-center justify-content-between pt-7 flex-wrap">
                                         <span class="font-weight-bolder display5 text-dark-75 pl-5 pr-10">
-                                            ZZ
+                                            33
                                         </span>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col">
-                                <div class="card card-custom card-stretch gutter-b">
-                                    <div class="card-header border-0 pt-6">
-                                        <h3 class="card-title">
-                                            <span class="card-label font-weight-bolder font-size-h4 text-dark-75">
-                                                Dimensione squadre
-                                            </span>
-                                        </h3>
-                                    </div>
-                                    <div class="card-body d-flex align-items-center justify-content-between pt-7 flex-wrap">
-                                        <span class="font-weight-bolder display5 text-dark-75 pl-5 pr-10">
-                                            WW
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
 
                         <div class="card card-custom gutter-b">
