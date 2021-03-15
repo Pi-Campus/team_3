@@ -1,0 +1,15 @@
+modules/
+compiler.xml
+gradle.xml
+jarRepositories.xml
+misc.xml
+vcs.xml
+
+# Default ignored files
+/shelf/
+/workspace.xml
+# Datasource local storage ignored files
+/../../../../:\playground\pi-challenge\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
