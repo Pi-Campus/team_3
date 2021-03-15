@@ -5,26 +5,23 @@ $(function(){
         $("#json-raw").val(window.JSON_DATA);
     }
 
-    /*
-    const TheChartIngredienti = echarts.init(document.getElementById('chart-Ingredienti'));
+    const TheChart = echarts.init(document.getElementById('chart-1'));
 
-    TheChartIngredienti.setOption({
+    TheChart.setOption({
         tooltip: {},
         xAxis: {
             type: 'category',
-            data: CHART_INGREDIENTI.data.map(p => p.x)
+            data: window.DATA.data.map(p => p.cells[0].value)
         },
         yAxis: {},
         series: [{
             large: true,
-            name: 'In quante pizze compare',
+            name: 'Serie',
             type: 'bar',
-            data: CHART_INGREDIENTI.data.map(p => p.y),
+            data: window.DATA.data.map(p => p.cells[1].value),
             itemStyle: {
                 color: '#3699ff'
             }
         }]
     });
-
-    */
 });
