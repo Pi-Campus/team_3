@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <base href="">
+    <meta charset="utf-8"/>
+    <title>Data explorer</title>
+    <meta name="description" content="Updates and statistics"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"/>
+    <link th:href="@{/assets/plugins/global/plugins.bundle.css}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{/assets/css/style.bundle.css}" rel="stylesheet" type="text/css"/>
+    <link rel="shortcut icon" th:href="@{/assets/media/logos/favicon.ico}"/>
+</head>
+
+<body id="kt_body" class="header-mobile-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
+<!--begin::Main-->
+<!--begin::Aside-->
+<div class="aside aside-left aside-fixed" id="kt_aside">
+    <!--begin::Aside Menu-->
+    <div id="kt_aside_menu" class="aside-menu my-5" data-menu-vertical="1" data-menu-scroll="1"
+         data-menu-dropdown-timeout="500">
+        <!--begin::Menu Nav-->
+        <ul class="menu-nav">
+
+            <th:block layout:fragment="left-sidebar">
+                <li class="menu-section">
+                    <h4 class="menu-text">Scenari</h4>
+                    <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
+                </li>
+
+                <li th:each="q : ${examples}"
+                    class="menu-item"
+                    aria-haspopup="true">
+                    <a th:href="@{/(q=${q})}" class="menu-link">
+                    <span class="svg-icon menu-icon">
+                        <i class="fa fa-home text-white"></i>
+                    </span>
+                        <span class="menu-text">[[${q}]]</span>
+                    </a>
+                </li>
+            </th:block>
+
+            <li class="menu-section">
+                <h4 class="menu-text">Link esterni</h4>
+                <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
+            </li>
+
+            <li class="menu-item" aria-haspopup="true">
+                <a th:href="@{https://preview.keenthemes.com/keen/demo7/index.html}" class="menu-link" target="_blank">
+                    <span class="svg-icon menu-icon">
+                        <i class="fas fa-external-link-alt text-white"></i>
+                    </span>
+                    <span class="menu-text">Keen</span>
+                </a>
+            </li>
+
+            <li class="menu-item" aria-haspopup="true">
+                <a th:href="@{https://echarts.apache.org/en/option.html#title}" class="menu-link" target="_blank">
+                    <span class="svg-icon menu-icon">
+                        <i class="fas fa-external-link-alt text-white"></i>
+                    </span>
+                    <span class="menu-text">Apache ECharts</span>
+                </a>
+            </li>
+        </ul>
+        <!--end::Menu Nav-->
+    </div>
+    <!--end::Aside Menu-->
+</div>
+<!--end::Aside-->
+<div class="d-flex flex-column flex-root">
+    <!--begin::Page-->
+    <div class="d-flex flex-row flex-column-fluid page">
+        <!--begin::Wrapper-->
+        <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+            <!--begin::Header-->
+            <div id="kt_header" class="header">
+                <!--begin::Container-->
+                <div class="container">
+                    <!--begin::Info-->
+                    <div class="d-flex align-items-center flex-wrap mr-1 mt-5 mt-lg-0">
+                        <!--begin::Page Heading-->
+                        <div class="d-flex align-items-baseline flex-wrap mr-5">
+                            <!--begin::Page Title-->
+                            <h4 class="text-dark font-weight-bold my-1 mr-5">AA</h4>
+                            <!--end::Page Title-->
+                        </div>
+                        <!--end::Page Heading-->
+                    </div>
+                    <!--end::Info-->
+                </div>
+                <!--end::Container-->
+            </div>
+            <!--end::Header-->
+            <!--begin::Content-->
+            <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+                <!--begin::Entry-->
+                <div class="d-flex flex-column-fluid">
+                    <!--begin::Container-->
+                    <div class="container">
+                        <!--begin::Dashboard-->
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="card card-custom card-stretch gutter-b">
+                                    <div class="card-header border-0 pt-6">
+                                        <h3 class="card-title">
+                                            <span class="card-label font-weight-bolder font-size-h4 text-dark-75">
+                                                Pizze
+                                            </span>
+                                        </h3>
+                                    </div>
+                                    <div class="card-body d-flex align-items-center justify-content-between pt-7 flex-wrap">
+                                        <span class="font-weight-bolder display5 text-dark-75 pl-5 pr-10">
+                                            22
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card card-custom card-stretch gutter-b">
+                                    <div class="card-header border-0 pt-6">
+                                        <h3 class="card-title">
+                                            <span class="card-label font-weight-bolder font-size-h4 text-dark-75">
+                                                Ingredienti totali
+                                            </span>
+                                        </h3>
+                                    </div>
+                                    <div class="card-body d-flex align-items-center justify-content-between pt-7 flex-wrap">
+                                        <span class="font-weight-bolder display5 text-dark-75 pl-5 pr-10">
+                                            11
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card card-custom card-stretch gutter-b">
+                                    <div class="card-header border-0 pt-6">
+                                        <h3 class="card-title">
+                                            <span class="card-label font-weight-bolder font-size-h4 text-dark-75">
+                                                Ingredienti unici
+                                            </span>
+                                        </h3>
+                                    </div>
+                                    <div class="card-body d-flex align-items-center justify-content-between pt-7 flex-wrap">
+                                        <span class="font-weight-bolder display5 text-dark-75 pl-5 pr-10">
+                                            XX
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col">
+                                <div class="card card-custom card-stretch gutter-b">
+                                    <div class="card-header border-0 pt-6">
+                                        <h3 class="card-title">
+                                            <span class="card-label font-weight-bolder font-size-h4 text-dark-75">
+                                                Giocatori totali
+                                            </span>
+                                        </h3>
+                                    </div>
+                                    <div class="card-body d-flex align-items-center justify-content-between pt-7 flex-wrap">
+                                        <span class="font-weight-bolder display5 text-dark-75 pl-5 pr-10">
+                                            YY
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card card-custom card-stretch gutter-b">
+                                    <div class="card-header border-0 pt-6">
+                                        <h3 class="card-title">
+                                            <span class="card-label font-weight-bolder font-size-h4 text-dark-75">
+                                                Team
+                                            </span>
+                                        </h3>
+                                    </div>
+                                    <div class="card-body d-flex align-items-center justify-content-between pt-7 flex-wrap">
+                                        <span class="font-weight-bolder display5 text-dark-75 pl-5 pr-10">
+                                            ZZ
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card card-custom card-stretch gutter-b">
+                                    <div class="card-header border-0 pt-6">
+                                        <h3 class="card-title">
+                                            <span class="card-label font-weight-bolder font-size-h4 text-dark-75">
+                                                Dimensione squadre
+                                            </span>
+                                        </h3>
+                                    </div>
+                                    <div class="card-body d-flex align-items-center justify-content-between pt-7 flex-wrap">
+                                        <span class="font-weight-bolder display5 text-dark-75 pl-5 pr-10">
+                                            WW
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card card-custom gutter-b">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    <h3 class="card-label">Ingredienti</h3>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div id="chart-Ingredienti"
+                                     style="width: 100%; height:400px;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card card-custom gutter-b">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    <h3 class="card-label">Ingredienti per pizza</h3>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div id="chart-IngredientiPerPizza"
+                                     style="width: 100%; height:400px;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--end::Dashboard-->
+                    </div>
+                    <!--end::Container-->
+                </div>
+                <!--end::Entry-->
+            </div>
+            <!--end::Content-->
+            <!--begin::Footer-->
+            <!--doc: add "bg-white" class to have footer with solod background color-->
+            <div class="footer py-4 d-flex flex-lg-column" id="kt_footer">
+                <!--begin::Container-->
+                <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+                    <!--begin::Copyright-->
+                    <div class="text-dark order-2 order-md-1">
+                        <span class="text-muted font-weight-bold mr-2">2020©</span>
+                        <a href="http://keenthemes.com/keen" target="_blank" class="text-dark-75 text-hover-primary">Keenthemes</a>
+                    </div>
+                    <!--end::Copyright-->
+                </div>
+                <!--end::Container-->
+            </div>
+            <!--end::Footer-->
+        </div>
+        <!--end::Wrapper-->
+    </div>
+    <!--end::Page-->
+</div>
+<!--end::Main-->
+
+<script>var HOST_URL = "http://localhost:8080";</script>
+<!--begin::Global Config(global config for global JS scripts)-->
+<script>var KTAppSettings = {"breakpoints": {"sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1200},
+    "colors": {
+        "theme": {
+            "base": {
+                "white": "#ffffff",
+                "primary": "#3699FF",
+                "secondary": "#E5EAEE",
+                "success": "#1BC5BD",
+                "info": "#6993FF",
+                "warning": "#FFA800",
+                "danger": "#F64E60",
+                "light": "#F3F6F9",
+                "dark": "#212121"
+            },
+            "light": {
+                "white": "#ffffff",
+                "primary": "#E1F0FF",
+                "secondary": "#ECF0F3",
+                "success": "#C9F7F5",
+                "info": "#E1E9FF",
+                "warning": "#FFF4DE",
+                "danger": "#FFE2E5",
+                "light": "#F3F6F9",
+                "dark": "#D6D6E0"
+            },
+            "inverse": {
+                "white": "#ffffff",
+                "primary": "#FFFFFF",
+                "secondary": "#212121",
+                "success": "#ffffff",
+                "info": "#ffffff",
+                "warning": "#ffffff",
+                "danger": "#ffffff",
+                "light": "#464E5F",
+                "dark": "#ffffff"
+            }
+        },
+        "gray": {
+            "gray-100": "#F3F6F9",
+            "gray-200": "#ECF0F3",
+            "gray-300": "#E5EAEE",
+            "gray-400": "#D6D6E0",
+            "gray-500": "#B5B5C3",
+            "gray-600": "#80808F",
+            "gray-700": "#464E5F",
+            "gray-800": "#1B283F",
+            "gray-900": "#212121"
+        }
+    },
+    "font-family": "Poppins"
+};</script>
+<!--end::Global Config-->
+<!--begin::Global Theme Bundle(used by all pages)-->
+<script th:src="@{/assets/plugins/global/plugins.bundle.js}"></script>
+<script th:src="@{/assets/js/scripts.bundle.js}"></script>
+<!--end::Global Theme Bundle-->
+
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.0.2/dist/echarts.min.js"></script>
+
+<script th:inline="javascript">
+
+</script>
+
+<script th:src="@{/assets/app.js}"></script>
+
+</body>
+</html>
