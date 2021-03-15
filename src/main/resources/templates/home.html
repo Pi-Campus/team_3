@@ -132,6 +132,17 @@
 
                         </div>
 
+                        <div class="card card-custom gutter-b">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    <h3 class="card-label">JSON</h3>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <textarea class="w-100" id="json-raw"></textarea>
+                            </div>
+                        </div>
+
                         <div class="row">
                             <div class="col">
                                 <div class="card card-custom card-stretch gutter-b">
@@ -189,24 +200,11 @@
                         <div class="card card-custom gutter-b">
                             <div class="card-header">
                                 <div class="card-title">
-                                    <h3 class="card-label">Ingredienti</h3>
+                                    <h3 class="card-label">Grafico</h3>
                                 </div>
                             </div>
                             <div class="card-body">
                                 <div id="chart-Ingredienti"
-                                     style="width: 100%; height:400px;">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card card-custom gutter-b">
-                            <div class="card-header">
-                                <div class="card-title">
-                                    <h3 class="card-label">Ingredienti per pizza</h3>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div id="chart-IngredientiPerPizza"
                                      style="width: 100%; height:400px;">
                                 </div>
                             </div>
@@ -303,7 +301,7 @@
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.0.2/dist/echarts.min.js"></script>
 
 <script th:inline="javascript">
-
+window.JSON_DATA = [[${JSON_DATA}]] ;
 </script>
 
 <script th:src="@{/assets/app.js}"></script>

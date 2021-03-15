@@ -1,5 +1,11 @@
 $(function(){
+    if (window.JSON_DATA) {
+        window.DATA = JSON.parse(window.JSON_DATA);
+        // console.log(window.DATA);
+        $("#json-raw").val(window.JSON_DATA);
+    }
 
+    /*
     const TheChartIngredienti = echarts.init(document.getElementById('chart-Ingredienti'));
 
     TheChartIngredienti.setOption({
@@ -20,23 +26,5 @@ $(function(){
         }]
     });
 
-    const TheChartIngredientiPerPizza = echarts.init(document.getElementById('chart-IngredientiPerPizza'));
-
-    TheChartIngredientiPerPizza.setOption({
-        tooltip: {},
-        xAxis: {
-            type: 'category',
-            data: CHART_INGREDIENTI_PER_PIZZA.data.map(p => p.x)
-        },
-        yAxis: {},
-        series: [{
-            large: true,
-            name: 'Quante pizze hanno questo numero di ingredienti',
-            type: 'bar',
-            data: CHART_INGREDIENTI_PER_PIZZA.data.map(p => p.y),
-            itemStyle: {
-                color: '#3699ff'
-            }
-        }]
-    });
+    */
 });
